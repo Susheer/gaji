@@ -1,6 +1,6 @@
 {
   "name": "gaji",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Love for NodeJS",
   "main": "src/core/main.js",
   "scripts": {
