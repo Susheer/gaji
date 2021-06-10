@@ -7,7 +7,7 @@
 <body>
   <div class="w3-container">
 
-    <h1 style="color:blueviolet">Gaji App - New</h1>
+    <h1 style="color:blueviolet">Gaji App - Old</h1>
     <h3>Brand new app</h3>
 
     <p>
@@ -22,7 +22,17 @@
 
   </div>
   <script>
-    require('../gui-scripts/renderer')
+      const scripts = [];
+      scripts.push('../gui-scripts/renderer.js');
+    // require('../gui-scripts/renderer.js')
+    if (scripts.length) {
+      console.log("Scripts",scripts);
+        document.write(
+          scripts
+            .map((script) => `<script defer src="${script}"><\/script>`)
+            .join('')
+        );
+      }
   </script>
 </body>
 

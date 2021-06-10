@@ -15,6 +15,7 @@ ipcRenderer.on('message', (event, text) => {
 })
 
 ipcRenderer.on('version', (event, text) => {
+  console.log("Version",text)
   version.innerText = text
 })
 

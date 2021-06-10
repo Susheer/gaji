@@ -8,7 +8,10 @@ const dispatch = (data) => {
 }
 
 const createDefaultWindow = () => {
-  win = new BrowserWindow()
+  win = new BrowserWindow( {webPreferences: {
+    nodeIntegration: true,
+    contextIsolation: false,
+}})
 
   win.on('closed', () => {
     win = null
@@ -26,6 +29,7 @@ app.on('ready', () => {
   autoUpdater.checkForUpdatesAndNotify()
 
   win.webContents.on('did-finish-load', () => {
+    console.log("Version->",app.getVersion())
     win.webContents.send('version', app.getVersion())
   })
 
