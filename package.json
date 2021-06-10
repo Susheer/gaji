@@ -1,0 +1,60 @@
+{
+  "name": "gaji",
+  "version": "2.2",
+  "description": "Love for NodeJS",
+  "main": "src/core/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Susheer/gaji.git"
+  },
+  "author": "Susheer gupta",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.2.4",
+    "electron-builder": "^22.10.5"
+  },
+  "build": {
+    "appId": "com.applyhead.gaji",
+    "productName": "gaji",
+    "copyright": "Copyright © year Susheer gupta",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "type": "distribution",
+      "target": [
+        "dmg"
+      ]
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "publish": [
+      "github"
+    ]
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.4"
+  },
+  "bugs": {
+    "url": "https://github.com/Susheer/gaji/issues"
+  },
+  "homepage": "https://github.com/Susheer/gaji#readme",
+  "keywords": []
+}
